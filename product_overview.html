@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ProductMart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="sty.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+
+    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+</head>
+<body>
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">English</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">French</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+</ul>
+
+<div class="white">
+    <div style="margin-top: 20px" class="row">
+        <div class="col s1">
+
+        </div>
+        <div  class="col s9">
+            <div style="border-radius: 25px; border: 1px solid #007A39;" class="row">
+                <div style="background-color:white;border-bottom-left-radius: 25px; border-top-left-radius: 25px; margin-top:9px; " class="col s2">
+                    <a  style="font-weight: 800; margin-left: 20px" class="dropdown-trigger green-text flow-text" href="#!" data-target="dropdown1">All<i class="material-icons green-text right">arrow_drop_down</i></a>
+
+                </div>
+                <div style="border-left:3px solid #007A39; height: 51px" class="col s8">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" id="autocomplete-input" class="autocomplete">
+                                    <label for="autocomplete-input">Autocomplete</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color:#007A39;border-bottom-right-radius: 25px; border-top-right-radius: 25px" class="col s2">
+                    <a>   <i  style="font-size: 45px; margin-top: 7px; margin-bottom: 0px;" class="material-icons white-text right">search</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s2">
+
+            <div style="background-color: #007A39; padding: 10px; border-radius: 25px">
+                <a class="dropdown-trigger white-text flow-text" href="#!" data-target="dropdown1">English<i class="material-icons white-text right">arrow_drop_down</i></a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div style="background-color: #007A39;margin-bottom: 0px " class="row">
+    <div class="col s1">
+        <i  style="font-size: 45px; margin-top: 7px; margin-bottom: 7px;" class="material-icons white-text right">home</i>
+
+    </div>
+    <div class="col s8">
+        <div style="font-size: 20px; margin-top: 15px;" class="row">
+            <div class="col s5">
+
+            </div>
+            <div class="col s3">
+                <a style="padding: 7px; border-radius: 25px; margin-top: 7px;" class="white green-text">All Categories</a>
+            </div>
+            <div class="col s4">
+                <a style="padding: 10px; border-radius: 25px; margin-top: 50px;" class="white green-text">Request Of Product</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s3">
+        <div style="font-size: 20px; margin-top: 7px; margin-bottom: 7px;" class="row">
+            <div class="col s6">
+                <a style="float: right" class="white-text">Sign Up </a>
+            </div>
+            <div class="col s6">
+                <a class="white-text">Help</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div style="" class="row">
+     <div style="box-shadow: 3px 5px 3px 3px #afafaf; margin-top: 15px" class="row">
+          <div style="margin-bottom: 20px" class="col s6">
+            <img class="responsive-img" src="cocoa.jpg">
+             <div style="margin-left: 25%">
+                 <p>Share this product:</p>
+                 <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-facebook green-text"></i>
+                 </a>
+                 <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-instagram green-text"></i>
+                 </a>
+                 <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-linkedin green-text"></i>
+                 </a>
+                 <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-twitter green-text"></i>
+                 </a>
+
+             </div>
+          </div>
+         <div  class="col s6">
+                 <h5 style="font-size: 20px !important; margin-top: 150px; font-weight: 600" class="black-text flow-text">
+                 <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                 </a>
+                     <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                     </a>
+                     <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                     </a>
+                     <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                     </a><a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                 </a>
+
+                     Reviews.</h5>
+             <p style="color: #a7a7a7">Product Code: 3672556</p>
+             <p style="color: black; font-weight: 600">Next week delivery available </p>
+             <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;" class="waves-effect waves-light modal-trigger" href="#modal1">Order Now</a>
+             <!-- Modal Structure -->
+             <div id="modal1" class="modal">
+                 <div class="modal-content">
+                    <div class="row">
+                        <div class="col s6">
+                           <p style="text-align: center; font-weight: 700;margin-bottom: 0 !important;">Welcome!</p>
+
+
+                           <div class="row">
+                               <form class="col s12">
+                                   <div style="margin-bottom: 0 !important;"  class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                       <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
+                                           <i style="" class="material-icons prefix">account_circle</i>
+                                           <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
+                                           <label for="email_inline">Email</label>
+
+                                       </div>
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+
+                                   <div  style="margin-bottom: 0 !important;" class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                       <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
+                                           <i style="" class="material-icons prefix">lock</i>
+                                           <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
+                                           <label for="email_inline">Password</label>
+
+                                       </div>
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+
+                                   <div style="margin-bottom: 0 !important;" style="margin-top: 0px !important;"  class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                       <a class="" href="" style="">
+                                           <div style="border: 1px solid green; border-radius: 25px; background-color: #007A39" class="input-field col s8">
+                                                <p style="color: white; text-align: center; ">Login</p>
+                                           </div>
+                                       </a>
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+
+                                   <div style="margin-bottom: 0px !important;"  class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                           <div class="input-field col s8">
+                                               <div style="margin-bottom: 0 !important;" class="row">
+                                                   <div class="col s3">
+                                                       <br>
+                                                       <hr>
+                                                   </div>
+                                                   <div class="col s6">
+                                                       <p style="color: gray; text-align: center; font-size: 75%; margin-bottom: 0 !important;">Don’t have an account?</p>
+
+                                                       <p style="color: #000000; text-align: center; font-weight: 500; margin-bottom: 0 !important;">Register</p>
+                                                   </div>
+                                                   <div class="col s3">
+                                                       <br>
+                                                    <hr>
+                                                   </div>
+                                               </div>
+                                           </div>
+
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+                                   <div style="margin-bottom: 0px !important;"  class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                       <a data-dismiss="modal1" data-toggle="modal" href="#modal2">
+                                           <div style="border: 1px solid green; border-radius: 25px; background-color: rgba(0, 122, 57, 0.6)" class="input-field col s8">
+                                               <p style="color: white; text-align: center; ">As a buyer</p>
+                                           </div>
+                                       </a>
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+                                   <div style="margin-bottom : 0px !important;"  class="row">
+                                       <div class="col s2">
+
+                                       </div>
+                                       <a class="" href="#" style="">
+                                           <div style="border: 1px solid green; border-radius: 25px; background-color: rgba(0, 122, 57, 0.6)" class="input-field col s8">
+                                               <p style="color: white; text-align: center; ">As a supplier</p>
+                                           </div>
+                                       </a>
+                                       <div class="col s2">
+
+                                       </div>
+                                   </div>
+
+                               </form>
+                           </div>
+
+                       </div>
+                        <div style="background-color: rgba(0, 223, 0, 0.33); height: 500px" class="col s6">
+
+                        </div>
+                    </div>
+                 </div>
+                 <div class="modal-footer">
+                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                 </div>
+             </div>
+
+
+         </div>
+     </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s6"><a class="active" href="#test1">Description`</a></li>
+                    <li class="tab col s6"><a  href="#test2">Reviews</a></li>
+
+
+                </ul>
+            </div>
+            <hr style="margin-right: 10%; margin-left: 10%">
+            <div id="test1" class="col s12"><ul class="collapsible">
+
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">description</i>
+                        description
+                    </div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">list_alt</i>
+                        CONSTITUENTS:
+                        </div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">place</i>
+                        COUNTRY OF ORIGIN:
+                    </div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">map</i>
+                        LOCATION OF PRODUCE:
+                    </div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">local_fire_department</i>
+                        CULTIVATION TYPE:
+                    </div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">approval</i>
+                        CERTIFICATION:
+                    </div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">inventory_2</i>
+                        SPECIAL STORAGE CONDITIONS:
+                    </div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+
+
+            </ul>
+            </div>
+            <div id="test2" class="col s12">Test 2</div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col s4">
+
+             <p style="text-align: center; color: #c9c9c9">Sold by Lagbajaomolagbaja</p>
+
+            </div>
+            <div class="col s4">
+
+                <p style="text-align: center; color: green; font-weight: 600">Learn more</p>
+
+
+            </div>
+            <div class="col s4">
+                <h5 style="font-size: 10px !important; font-weight: 600" class="black-text flow-text">
+                    <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                    </a>
+                    <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                    </a>
+                    <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                    </a>
+                    <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                    </a><a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
+                </a>
+
+                    <span style="font-size: 20px !important;">Reviews.</span></h5>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col s4">
+            <div style="width: 80%; margin-left: 10px; background-color: #F2F9F7">
+              <p style="text-align: center; color: green; padding: 15px; font-weight: 700">Palm fruit</p>
+                <img style="width: 60%; margin-left: 20%" src="cocoa.jpg">
+                <p style=" text-align: center; color: green; padding: 15px; ">Sweet corn of certain species ..</p>
+
+                <div class="row">
+                  <div class="col s6">
+                      <p style="text-align: center; color: green;  font-weight: 700; margin-top: 0">$3,000</p>
+
+                  </div>
+                    <div class="col s6">
+                     <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;">View</a>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="col s4">
+                <div style="width: 80%; margin-left: 10px; background-color: #F2F9F7">
+                    <p style="text-align: center; color: green; padding: 15px; font-weight: 700">Palm fruit</p>
+                    <img style="width: 60%; margin-left: 20%" src="cocoa.jpg">
+                    <p style=" text-align: center; color: green; padding: 15px; ">Sweet corn of certain species ..</p>
+
+                    <div class="row">
+                        <div class="col s6">
+                            <p style="text-align: center; color: green;  font-weight: 700; margin-top: 0">$3,000</p>
+
+                        </div>
+                        <div class="col s6">
+                            <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;">View</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col s4">
+                <div style="width: 80%; margin-left: 10px; background-color: #F2F9F7">
+                    <p style="text-align: center; color: green; padding: 15px; font-weight: 700">Palm fruit</p>
+                    <img style="width: 60%; margin-left: 20%" src="cocoa.jpg">
+                    <p style=" text-align: center; color: green; padding: 15px; ">Sweet corn of certain species ..</p>
+
+                    <div class="row">
+                        <div class="col s6">
+                            <p style="text-align: center; color: green;  font-weight: 700; margin-top: 0">$3,000</p>
+
+                        </div>
+                        <div class="col s6">
+                            <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;">View</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<footer style="background-color: #007A39" class="page-footer darken-4">
+    <div  class="row">
+        <div  class="col l3 s6">
+            <h5 style="font-size: 20px !important; margin-left: 20px !important;" class="white-text flow-text">LET US HELP YOU</h5>
+            <ul style="margin-left: 20px !important;">
+                <li><a class="grey-text text-lighten-3" href="#!">Help center</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Delivery options</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Report product</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Report product</a></li>
+            </ul>
+        </div>
+        <div class="col l3  s6">
+            <h5 style="font-size: 20px !important;" class="white-text flow-text">ABOUT PRODUCE MART</h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Terms and conditions</a></li>
+            </ul>
+        </div>
+        <div class="col l3  s6">
+            <h5 style="font-size: 15px !important;" class="white-text flow-text">MAKE MONEY WITH PRODUCE MARTT</h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Sell on Produce Mart</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Become a sales consultant</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Become a logistics partner</a></li>
+            </ul>
+        </div>
+        <div class="col l3  s6">
+            <h5 style="font-size: 20px !important;" class="white-text flow-text">JOIN US</h5>
+            <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-facebook white-text"></i>
+            </a>
+            <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-instagram white-text"></i>
+            </a>
+            <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-linkedin white-text"></i>
+            </a>
+            <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-twitter white-text"></i>
+            </a>
+        </div>
+    </div>
+    <hr style="margin-left:25px; margin-right:25px">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2022 Copyright Produce Mart.
+            <a class="grey-text text-lighten-4 right" href="#!">All rights reserved</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="drop.js"></script>
+</html>
