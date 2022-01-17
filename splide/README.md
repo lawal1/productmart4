@@ -28,9 +28,9 @@ No dependencies, no Lighthouse errors.
   <a href="https://github.com/Splidejs/splide/discussions">Discussions/Q&A</a>
 </p>
 
-<h3>
+<h5>
   Ready For
-</h3>
+</h5>
 <p>
   <a href="https://splidejs.com/guides/getting-started/">
     <img alt="React Splide" src="./images/javascript-logo.svg" width="30">
@@ -49,9 +49,9 @@ No dependencies, no Lighthouse errors.
   </a>
 </p>
 
-<h3>
+<h5>
   Extensions
-</h3>
+</h5>
 
 <p>
   <a href="https://splidejs.com/extensions/auto-scroll/">Auto Scroll</a> ・
@@ -61,9 +61,9 @@ No dependencies, no Lighthouse errors.
   <a href="https://splidejs.com/extensions/url-hash/">URL Hash</a>
 </p>
 
-<h3>
+<h5>
   Translation
-</h3>
+</h5>
 
 <p>
   <a href="https://ja.splidejs.com">日本語</a>

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>quote3</title>
+    <title>quote5</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -33,8 +33,8 @@
             /* Set the hr color */
             color: #aaaaaa; /* old IE */
             background-color: #aaaaaa;
-            margin-left: 16%;
-            margin-right: 16%/* Modern Browsers */
+             margin-left: 16%;
+             margin-right: 16%/* Modern Browsers */
         }
         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
         #main {
@@ -344,24 +344,20 @@
 
         }
 
-        .hrdivider {
-            position: relative;
-            margin-bottom: 20px;
-            width: 100%;
+        #textBord {
+            width: 70%;
             text-align: center;
+            border-bottom: 1px solid #ddd;
+            line-height: 0.1em;
+            margin-left: 20px;
+            padding-left: 40px;
         }
 
-        .hrdivider span {
-            position: absolute;
-            top: -11px;
-            background: #fff;
-            padding: 0 20px;
-            font-weight: bold;
-            font-size: 16px;
+        #textBord span {
+            background-color:#fff;
             color: grey;
+            padding:0 10px;
         }
-
-
 
         #tLast {
             border: black 1px solid !important;
@@ -498,8 +494,8 @@
                 <img id="img1" src="assets/img/productPics.png">
             </div>
             <div style="color: black" class="row">
-                <div class="col-lg-2 col-xs-2"></div>
-                <div class="col-lg-5 col-xs-5">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
                     <p style="font-weight: 700;">Product Availability:</p>
                     <br>
                     <p>Quantity requested</p> <br>
@@ -509,8 +505,8 @@
                     <p>estimated cost:</p>  <br>
                 </div>
                 <div class="col-lg-1"></div>
-                <div  class="col-lg-2 col-xs-2" style="text-align: right">
-                    <p style="font-weight: 700; color:#BA5313;">Awaiting response</p><br>
+                <div  class="col-lg-2" style="text-align: right">
+                    <p style="font-weight: 700; color:#BA5313;">Yes</p><br>
                    <span style="color: #565656">
                         <p>10bags</p><br>
                     <p>200kg</p><br>
@@ -534,159 +530,120 @@
     <div class="all" style="margin-top: 3%; margin-right: 2.5%">
         <div  class=" row con1" style="background-color:#fff; border-bottom: 1px solid #000000">
             <div class="col-lg-9">
-                <p style="text-align: center; color: #000000; margin-top: 7%; margin-bottom: 7%"> Pick what kind of inspection  best  <br> serve you!</p>
+                <p style="text-align: center; color: #000000; margin-top: 7%; margin-bottom: 7%">Payment complete, awaiting inspection <br> details. Proceed!</p>
             </div>
 
-            <div style=" height: 100%" class="col-lg-2">
-                <img src="assets/img/img2.png">
+            <div style="background-color: green; height: 100%" class="col-lg-3">
+
             </div>
 
         </div>
         <div  class=" row con1" style="background-color:#fff; border-bottom: 1px solid #000000">
+            <div class="col-lg-3">
+                <p style="color: #cacaca; text-align: center; padding: 15px">ORDER</p>
+            </div>
 
             <div class="col-lg-6">
-                <p style="color:#cacaca; text-align: center;  padding: 15px">INSPECTION QUOTE</p>
+                <p style="color: #000000; text-align: center;  padding: 15px">SHIPPING</p>
             </div>
 
             <div class="col-lg-3">
-                <p style="color:#000000; text-align: center;  padding: 15px">SHIPPING QUOTE</p>
-            </div>
-
-            <div class="col-lg-3">
+                <p style="color: #cacaca; text-align: center;  padding: 15px">RELEASE FUNDS</p>
             </div>
 
         </div>
     </div>
 
     <div class="all" style="margin-top: 3%; margin-right: 2.5%">
+        <div  class=" row con1" style="background-color:#fff; border-bottom: 1px solid #000000">
 
-
-        <div  class=" row con1" style="background-color:#fff;">
-
-
-
-            <div style="color: black;font-weight: 700; border: 1px solid black; margin-bottom: 2%; margin-left: 0.5%; margin-right: 0.5%;" class="row">
-                <div class="col-lg-1 col-xs-1"></div>
-                <div class="col-lg-6 col-xs-6">
-                    <p style="margin-left: 15%">Services</p>
-
-                </div>
-                <div class="col-lg-1 col-xs-1"></div>
-                <div  class="col-lg-2 col-xs-2" style="text-align: center; padding-left: 11%">
-                    <p>Price</p>
-                </div>
-            </div>
-
+            <h4 style="text-align: center; padding: 15px">Shipping Summary</h4>
 
             <div style="color: black" class="row">
-
-
-                <div class="col-lg-2 col-xs-2">
-                    <div style="text-align: right">
-                        <input type="radio" name="inspectionType" value="full">
-                    </div>
-
-                    <div style="text-align: right; margin-top: 12%;">
-                        <input type="radio" name="inspectionType" value="random">
-                    </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
+                    <p style="font-weight: 700;">Shipping Type : </p>
+                    <br>
+                    <p>Insurance?</p> <br>
+                    <p>Duration:</p> <br>
+                    <p>Pick up date:</p> <br>
+                    <p>Date of request:</p> <br>
+                    <p>Port: Apapa port </p>  <br>
                 </div>
-                <div class="col-lg-5 col-xs-5">
-                    <p>Full Inspection<i style="color: green; margin-left: 1%" class="icon-question-sign"></i></p> <br>
-                    <p>Random Inspection<i style="color: green; margin-left: 1%" class="icon-question-sign"></i></p> <br>
-                    <p>Service Charge:</p> <br>
-                    <p>Processing Fee:</p> <br>
-                    <p>Estimated number of days</p>
-
-                </div>
-                <div class="col-lg-1 col-xs-1"></div>
-                <div  class="col-lg-2 col-xs-2" style="text-align: right">
-                    <p>$800:00</p> <br>
-                    <p>$600:00</p> <br>
-                    <p>$30:00</p> <br>
-                    <p>$90:00</p> <br>
-                    <p>7 days</p>
+                <div class="col-lg-1"></div>
+                <div  class="col-lg-2" style="text-align: right">
+                    <p>Sea Freight</p><br>
+                   <span style="color: #565656">
+                        <p>Yes</p><br>
+                    <p>7Days</p><br>
+                    <p style="color: darkred; font-weight: 600 ">8:10am</p><br>
+                    <p style="color: darkred ; font-weight: 600">22 Dec,2021</p><br>
+                   </span>
                 </div>
             </div>
 
-            <div style="color: black; padding-bottom: 10%" class="row" >
-                <div class="col-lg-1 col-xs-1"></div>
-                <div class="col-lg-3 col-xs-3">
-                    <hr style="width: 100% !important;">
-                </div>
-                <div class="4 col-xs-4">
-                    <h5 style="text-align: center">Additional service</h5>
-                </div>
-                <div style="padding-left: 0"  class="col-lg-3 col-xs-3">
-                    <hr style="width: 100% !important; margin-left: 0!important;">
-                </div>
-                <div class="col-lg-1 col-xs-1"></div>
+            <hr>
 
-
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-6">
+                    <h4 style="padding-top: 15px ; color: #cacaca">Shipping Summary</h4>
+                </div>
             </div>
 
-
-            <div style="color: black;" class="row" >
-                <div class="col-lg-2 col-xs-2">
-                    <div style="text-align: right; margin-top: 16%;">
-                        <input type="radio" name="supervisionOfLoading" value="yes">
-                    </div>
+            <div style="color: black" class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
+                    <br>
+                    <p>Insurance?</p> <br>
+                    <p>Duration:</p> <br>
+                    <p>Pick up date:</p> <br>
                 </div>
-                <div class="col-lg-5 col-xs-5">
-                    <p style="margin-bottom: 4%">Do you require supervision of loading?</p>
-                    <p><b>Supervision of loading<i style="color: green; margin-left: 1%" class="icon-question-sign"></i></b></p>
-
-
+                <div class="col-lg-1"></div>
+                <div  class="col-lg-2" style="text-align: right">
+                    <p>Sea Freight</p><br>
+                   <span style="color: #565656">
+                        <p>Yes</p><br>
+                    <p>7Days</p><br>
+                   </span>
                 </div>
-                <div class="col-lg-1 col-xs-1"></div>
-                <div  class="col-lg-2 col-xs-2" style="text-align: right">
-                    <P style="margin-top: 15%;">$450:00</P>
-                </div>
-
-
             </div>
 
-            <hr  style="background-color: #cacaca">
+            <hr>
 
-
-            <div style="color: darkgreen; font-weight: 700; margin-bottom: 4%;" class="row" >
-                <div class="col-lg-2 col-xs-2">
+            <div class="row">
+                <div class="col-lg-2">
                 </div>
-                <div class="col-lg-5 col-xs-5">
-                    <p>Total:</p>
-
-
-
+                <div class="col-lg-6">
+                    <h4 style="padding-top: 15px ; color: #cacaca">SHIPPER DETAILS</h4>
                 </div>
-                <div class="col-lg-1 col-xs-1"></div>
-                <div  class="col-lg-2 col-xs-2" style="text-align: right">
-                    <P>$1360:00</P>
-                </div>
-
-
             </div>
 
+            <div style="color: black" class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
+                    <p style="font-weight: 700;">Shipping Company:  </p>
+                    <br>
+                </div>
+                <div class="col-lg-1"></div>
+                <div  class="col-lg-2" style="text-align: right">
+                    <p style="color: darkred ; font-weight: 600">Awaiting response</p><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div style=" margin-top: 30px; margin-bottom: 80px;  border-radius: 20px; background-color: lightgray" class="col-lg-2">
+                    <p style="text-align: center; color: #ffffff; padding-top: 6px; padding-bottom: 5px">NEXT</p>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
 
         </div>
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-<!--graph-->
-
+        <!--graph-->
+</div>
 <script src="assets/js/sidenav.js"></script>
 <script src="assets/js/jquery-3.5.1.min.js"></script>
 <script src="assets/js/Qurnex.js"></script>
