@@ -23,13 +23,42 @@
 
     <link rel="stylesheet" href="splide/dist/css/splide.min.css">
 
+    <style>
+        .bg {
+            /* The image used */
+            background-image: url("imgBg.png");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
 
+        .bg2 {
+            /* The image used */
+            background-image: url("response.png");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+    </style>
 
 </head>
 <body>
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
+<ul id="dropdown1" class="dropdown-content" style="border-radius: 25px">
     <li><a href="#!">English</a></li>
     <li class="divider"></li>
     <li><a href="#!">French</a></li>
@@ -44,32 +73,40 @@
         </div>
         <div  class="col s9">
             <div style="border-radius: 25px; border: 1px solid #007A39;" class="row">
+
                 <div style="background-color:white;border-bottom-left-radius: 25px; border-top-left-radius: 25px; margin-top:9px; " class="col s2">
                     <a  style="font-weight: 800; margin-left: 20px" class="dropdown-trigger green-text flow-text" href="#!" data-target="dropdown1">All<i class="material-icons green-text right">arrow_drop_down</i></a>
 
                 </div>
                 <div style="border-left:3px solid #007A39; height: 51px" class="col s8">
+
                     <div class="row">
                         <div class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
+                                    <label style=" text-align: center" for="autocomplete-input"> Search products and categories </label>
                                     <input type="text" id="autocomplete-input" class="autocomplete">
-                                    <label for="autocomplete-input">Autocomplete</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="background-color:#007A39;border-bottom-right-radius: 25px; border-top-right-radius: 25px" class="col s2">
+
+
+                <div style="background-color:rgba(39, 116, 75, 0.5);border-bottom-right-radius: 25px; border-top-right-radius: 25px; position: relative" class="col s2">
                     <a>   <i  style="font-size: 45px; margin-top: 7px; margin-bottom: 0px;" class="material-icons white-text right">search</i>
                     </a>
                 </div>
             </div>
+
+
         </div>
+
+
 
         <div class="col s2">
 
-            <div style="background-color: #007A39; padding: 10px; border-radius: 25px">
+            <div style="background-color: rgba(39, 116, 75, 0.5); padding: 10px; border-radius: 25px; width: 68%; margin-left: 16%">
                 <a class="dropdown-trigger white-text flow-text" href="#!" data-target="dropdown1">English<i class="material-icons white-text right">arrow_drop_down</i></a>
 
             </div>
@@ -78,7 +115,7 @@
     </div>
 </div>
 
-<div style="background-color: #007A39;margin-bottom: 0px " class="row">
+<div style="background-color: rgba(39, 116, 75, 0.5);margin-bottom: 0px " class="row">
     <div class="col s1">
         <i  style="font-size: 45px; margin-top: 7px; margin-bottom: 7px;" class="material-icons white-text right">home</i>
 
@@ -89,17 +126,17 @@
 
             </div>
             <div class="col s3">
-                <a style="padding: 7px; border-radius: 25px; margin-top: 7px;" class="white green-text">All Categories</a>
+                <a style="padding: 10px; border-radius: 25px; margin-top: 50px; font-size: 15px;" class="white green-text">All Categories</a>
             </div>
             <div class="col s4">
-                <a style="padding: 10px; border-radius: 25px; margin-top: 50px;" class="white green-text">Request Of Product</a>
+                <a style="padding: 10px; border-radius: 25px; margin-top: 50px; font-size: 15px;" class="white green-text">Request Of Product</a>
             </div>
         </div>
     </div>
     <div class="col s3">
         <div style="font-size: 20px; margin-top: 7px; margin-bottom: 7px;" class="row">
             <div class="col s6">
-                <a style="float: right" class="white-text">Sign Up </a>
+                <a style="float: right" class="white-text modal-trigger" href="#modal1">Sign Up </a>
             </div>
             <div class="col s6">
                 <a class="white-text">Help</a>
