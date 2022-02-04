@@ -61,11 +61,9 @@
 <body>
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content" style="border-radius: 25px">
-    <li><a href="#!">English</a></li>
+    <li><a href="#!">Fruits</a></li>
     <li class="divider"></li>
-    <li><a href="#!">French</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+    <li><a href="buyer.html">Vegetables</a></li>
 </ul>
 
 <div class="white">
@@ -85,9 +83,9 @@
                       <div class="row">
                           <div class="col s12">
                               <div class="row">
-                                  <div class="input-field col s12">
-                                      <label style=" text-align: center" for="autocomplete-input"> Search products and categories </label>
-                                       <input type="text" id="autocomplete-input" class="autocomplete">
+                                  <div class="input-field col s12" style="margin-top: 0 !important;">
+
+                                       <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Search all Categories">
                                   </div>
                               </div>
                           </div>
@@ -109,13 +107,31 @@
         <div class="col s2">
 
             <div style="background-color: rgba(39, 116, 75, 0.5); padding: 10px; border-radius: 25px; width: 68%; margin-left: 16%">
-                <a class="dropdown-trigger white-text flow-text" href="#!" data-target="dropdown1">English<i class="material-icons white-text right">arrow_drop_down</i></a>
+                <div style=" border-radius: 25px; width: 80%; color: white !important; ">
+                    <div style="margin-bottom: 0 !important;" class="row">
+                        <a class="modal-trigger" style="color: white !important;" href="#modal1">
+                        <div  class="col s4">
+                            <i style="margin-bottom: 0" class="material-icons">person</i>
+                        </div>
+                        <div class="col s4">
+                            <i style="margin-bottom: 0" class="material-icons">arrow_drop_down</i>
 
+                        </div>
+                            </a>
+                        <div class="col s1"></div>
+                        <div class="col s2">
+                           <img style="" src="Vector%20(11).png">
+
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                </div>
             </div>
              </div>
 
     </div>
 </div>
+
 
 <div style="background-color: rgba(39, 116, 75, 0.5);margin-bottom: 0px " class="row">
     <div class="col s1">
@@ -155,8 +171,8 @@
                                          </div>
                                          <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
                                              <i class="material-icons prefix">account_circle</i>
-                                             <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
-                                             <label for="email_inline">Email</label>
+                                             <input style=" margin-bottom: 2px; padding-left: 50px;"  id="email" type="email" class="validate"
+                                                     placeholder="Email">
 
                                          </div>
                                          <div class="col s2">
@@ -170,8 +186,8 @@
                                          </div>
                                          <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
                                              <i class="material-icons prefix">lock</i>
-                                             <input style=" margin-bottom: 2px"  id="password" type="password" class="validate">
-                                             <label for="email_inline">Password</label>
+                                             <input style=" margin-bottom: 2px; padding-left: 50px;"  id="password" type="password" class="validate"
+                                                     placeholder="Password">
 
                                          </div>
                                          <div class="col s2">
