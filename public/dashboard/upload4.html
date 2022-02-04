@@ -150,12 +150,12 @@
         }
 
 
-        #lastSection {
+        /* #lastSection {
         colorrgba(39, 116, 75, 0.5);
             font-size:24px;
             margin-top: 70px;
 
-        }
+        } */
 
         /*graph*/
         .barchart-Wrapper {
@@ -608,7 +608,7 @@
                     <div class="row">
                         <div class="form-group col-lg-12">
                             <label for="ProdCat">Product Category<i class="icon-star" aria-hidden="true" style="color:red"></i></label>
-                            <select class="form-control form-control-lg" id="ProdCat" style="height:50px;">
+                            <select class="form-control form-control-lg" id="xcategory" style="height:50px;">
                                 <option>Oils</option>
                                 <option>Fruits</option>
                                 <option>Vegetables</option>
@@ -624,7 +624,7 @@
                     </div>
                     <div class="row">
                         <div style="padding-right: 0 !important;" class="form-group col-lg-11">
-                           <input type="text" class="form-control" id="productName" required="" style="height:50px;">
+                           <input type="text" class="form-control" id="attachment" required="" style="height:50px;">
                         </div>
                         <a style="margin: 0 !important; padding: 0 !important;">
                             <div style="background-color: #007A39; height: 50px" class="form-group col-lg-1">
@@ -643,8 +643,8 @@
 
                         <div class="col-lg-12" style="text-align: center;">
 
-                            <p style="margin-top: 2%;"><button class="paybtn" type="submit">SAVE AND CONTINUE LATER</button></p>
-                            <p style="margin-top: 2%; margin-bottom: 10%;"><button class="blurpaybtn">NEXT</button></p>
+                            <p style="margin-top: 2%;"><button class="paybtn" id="save" onclick="storeDocs(this.id)" type="button">SAVE AND CONTINUE LATER</button></p>
+                            <p style="margin-top: 2%; margin-bottom: 10%;"><button id="next" onclick="storeDocs(this.id)" type="button" class="blurpaybtn">NEXT</button></p>
 
 
 
@@ -676,8 +676,36 @@
     });
 
 </script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+    authDomain: "productxmartx.firebaseapp.com",
+    projectId: "productxmartx",
+    storageBucket: "productxmartx.appspot.com",
+    messagingSenderId: "526006862845",
+    appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+    measurementId: "G-2TPETBSSET"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage()
+</script>
 <script src="assets/js/sidenav.js"></script>
 <script src="assets/js/Qurnex.js"></script>
 <script src="assets/js/bootstrap.js"></script>
+<script src="../admin/certificates.js"></script>
 </body>
 </html>

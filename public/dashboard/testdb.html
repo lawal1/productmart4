@@ -1,0 +1,60 @@
+<html>
+    <body>
+        <button onclick="addNewProduct()">upload</button>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+        authDomain: "productxmartx.firebaseapp.com",
+        projectId: "productxmartx",
+        storageBucket: "productxmartx.appspot.com",
+        messagingSenderId: "526006862845",
+        appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+        measurementId: "G-2TPETBSSET"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const storage = firebase.storage()
+    </script>
+    
+    <script>
+        const routeList= {
+            1:"upload2.html",
+            2:"upload3.html",
+            3:"upload4.html",
+            4:"upload5.html",
+        }
+        function addNewProduct(){
+            auth.onAuthStateChanged(async user =>{
+                const email = user.email
+                const finding = await finder("owner", email)
+                const stage = finding[0].stage
+                const routing = routeList[stage]
+                if(routing === undefined){
+                    window.location.href = "/Dashboard/upload1.html"
+                } else {
+                    window.location.href = `/Dashboard/${routing}`
+                }
+            })
+        }
+
+        async function finder(key, value){
+            return await db.collection('products').where(key, '==', value).get().then(data=>{
+        return [data.docs[0].data(), data.docs[0].id]
+    }).catch(e=> console.log(e))
+}
+    </script>
+</html>

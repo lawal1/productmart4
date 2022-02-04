@@ -150,12 +150,12 @@
         }
 
 
-        #lastSection {
-        colorrgba(39, 116, 75, 0.5);
+        /* #lastSection {
+        colorgba(39, 116, 75, 0.5);
             font-size:24px;
             margin-top: 70px;
 
-        }
+        } */
 
         /*graph*/
         .barchart-Wrapper {
@@ -587,7 +587,7 @@
                <div class="row">
                    <div class="form-group col-lg-12">
                        <label for="TD">Product Description<i class="icon-star" aria-hidden="true" style="color:red"></i></label>
-                       <textarea class="form-control" id="TD" rows="3"></textarea>
+                       <textarea class="form-control" id="PD" rows="3"></textarea>
                    </div>
 
                </div>
@@ -664,11 +664,11 @@
 
                  <div class="row" style="color: black; margin-bottom: 20px; margin-top: 20px;">
                      <div class="col-lg-5">
-                         <input name="choosing1" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
+                         <input name="choosing1" onclick="checkbox()" id="yearroundyes" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing1" type="radio" value="no1"> No, only available from:
+                         <input name="choosing1" id="yearroundno" onclick="checkbox()" type="radio" value="no1"> No, only available from:
                      </div>
 
                 </div>
@@ -764,8 +764,8 @@
 
                      <div class="col-lg-12" style="text-align: center;">
 
-                         <p style="margin-top: 2%;"><button class="paybtn" type="submit">SAVE AND CONTINUE LATER</button></p>
-                         <p style="margin-top: 2%; margin-bottom: 10%;"><button class="blurpaybtn">NEXT</button></p>
+                         <p   style="margin-top: 2%;"><button onclick="storeDocs(this.id)" id="save" type="button" class="paybtn">SAVE AND CONTINUE LATER</button></p>
+                         <p  style="margin-top: 2%; margin-bottom: 10%;"><button onclick="storeDocs(this.id)" id="next"  class="blurpaybtn">NEXT</button></p>
 
 
 
@@ -797,8 +797,36 @@
     });
 
 </script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+    authDomain: "productxmartx.firebaseapp.com",
+    projectId: "productxmartx",
+    storageBucket: "productxmartx.appspot.com",
+    messagingSenderId: "526006862845",
+    appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+    measurementId: "G-2TPETBSSET"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage()
+</script>
 <script src="assets/js/sidenav.js"></script>
 <script src="assets/js/Qurnex.js"></script>
 <script src="assets/js/bootstrap.js"></script>
+<script src="../admin/productgeneraldetails.js"></script>
 </body>
 </html>
