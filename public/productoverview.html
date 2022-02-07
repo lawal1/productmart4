@@ -147,7 +147,7 @@
     <div style="" class="row">
      <div style="box-shadow: 3px 5px 3px 3px #afafaf; margin-top: 15px" class="row">
           <div style="margin-bottom: 20px" class="col s6">
-            <img class="responsive-img" src="cocoa.jpg">
+            <img id="image" class="responsive-img">
              <div style="margin-left: 25%">
                  <p>Share this product:</p>
                  <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-facebook green-text"></i>
@@ -176,7 +176,7 @@
                      Reviews.</h5>
              <p style="color: #a7a7a7">Product Code: 3672556</p>
              <p style="color: black; font-weight: 600">Next week delivery available </p>
-             <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;" class="waves-effect waves-light modal-trigger" href="#modal1">Order Now</a>
+             <a style="padding-left: 20px; padding-right: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 15px; background-color: #007A39; color: white;" class="waves-effect waves-light" onclick="isLoggedIn(this.id)" id="ordernow">Order Now</a>
              <!-- Modal Structure -->
              <div id="modal1" class="modal">
                  <div class="modal-content">
@@ -323,49 +323,49 @@
                         <i class="material-icons">description</i>
                         description
                     </div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-body"><p id="description"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">list_alt</i>
                         CONSTITUENTS:
                         </div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body"><p id="constituents"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">place</i>
                         COUNTRY OF ORIGIN:
                     </div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body"><p id="place"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">map</i>
                         LOCATION OF PRODUCE:
                     </div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body"><p id="location"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">local_fire_department</i>
                         CULTIVATION TYPE:
                     </div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-body"><p id="cultivationtype"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">approval</i>
                         CERTIFICATION:
                     </div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-body"><p id="cert"></p></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">inventory_2</i>
                         SPECIAL STORAGE CONDITIONS:
                     </div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-body"><p id="storage"></p></div>
                 </li>
 
 
@@ -533,4 +533,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="drop.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+    authDomain: "productxmartx.firebaseapp.com",
+    projectId: "productxmartx",
+    storageBucket: "productxmartx.appspot.com",
+    messagingSenderId: "526006862845",
+    appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+    measurementId: "G-2TPETBSSET"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage()
+</script>
+<script src="buyerscripts/productoverview.js"></script>
 </html>

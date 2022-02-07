@@ -1,7 +1,10 @@
 function useStage(stage){
     return stage+1
 }
-
+var productAllYearRound = "" // document.getElementById("productAllYearRound").value || 0
+var specialStorage = "" //document.getElementById("specialStorage").value || 0
+var temperatureControlledTransportation = ""
+var saved = undefined
 async function storeDocs(btntype){
     const productName = document.getElementById('productName').value
     const productVariety = document.getElementById('PV').value
@@ -12,13 +15,15 @@ async function storeDocs(btntype){
     const locationOfProduct = document.getElementById("LOC").value
     const isgmo = document.getElementById("GMO").value
     const cropYear = document.getElementById("CropYear").value
-    const productAllYearRound = 9 // document.getElementById("productAllYearRound").value || 0
-    const specialStorage = 9 //document.getElementById("specialStorage").value || 0
-    const temperatureControlledTransportation = 9// document.getElementById("temperatureControlledTransportation").value || 0
+   // document.getElementById("temperatureControlledTransportation").value || 0
+    let from = document.getElementById("from").value || ""
+    let to = document.getElementById("to").value || ""
+    let storageDesc = document.getElementById("storagereq").value || ""
+    let tempDetails = document.getElementById("tempdetails").value || ""
     const stage = 1
     const pressed = btntype
  
-    return auth.onAuthStateChanged(async user => {
+    return saved === true && pressed === "next" ? window.location.href = "/Dashboard/upload2.html"  : auth.onAuthStateChanged(async user => {
         if(user){
             let owner = user.email
             const newDoc = await db.collection('products').add({
@@ -35,7 +40,11 @@ async function storeDocs(btntype){
                 specialStorage: specialStorage,
                 temperatureControlledTransportation: temperatureControlledTransportation,
                 stage: stage,
-                owner: owner
+                owner: owner,
+                from: from,
+                to: to,
+                storageDesc: storageDesc,
+                tempDetails: tempDetails,
                 
             })
             let userId = await finder("email", owner)
@@ -123,4 +132,24 @@ async function finder(key, value){
     return await db.collection('users').where(key, '==', value).get().then(data=>{
         return [data.docs[0].data(), data.docs[0].id]
     }).catch(e=> console.log(e))
+}
+
+function checkbox(id){
+    if(id === "yearroundyes"){
+        productAllYearRound = "yes"
+    }else if(id === "yearroundno"){
+        productAllYearRound = "no"
+    } else if(id === "ssno"){
+        specialStorage = "no"
+    } else if(id === "ssyes"){
+        specialStorage = "yes"
+    } else if(id === "tempno"){
+        temperatureControlledTransportation = "no"
+    } else if(id === "tempyes"){
+        temperatureControlledTransportation = "yes"
+    }else{
+
+    }
+
+    return id
 }

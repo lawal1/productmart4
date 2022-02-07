@@ -664,11 +664,11 @@
 
                  <div class="row" style="color: black; margin-bottom: 20px; margin-top: 20px;">
                      <div class="col-lg-5">
-                         <input name="choosing1" onclick="checkbox()" id="yearroundyes" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
+                         <input name="choosing1" onclick="checkbox(this.id)" id="yearroundyes" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing1" id="yearroundno" onclick="checkbox()" type="radio" value="no1"> No, only available from:
+                         <input name="choosing1" id="yearroundno" onclick="checkbox(this.id)" type="radio" value="no1"> No, only available from:
                      </div>
 
                 </div>
@@ -681,10 +681,10 @@
                          <div class="row">
                              <div class="col-lg-2"></div>
                              <div class="col-lg-1" style="margin-top: 28px;">From:</div>
-                             <div class="col-lg-2"><input type="date" style="height:70px;"></div>
+                             <div class="col-lg-2"><input id="from" type="date" style="height:70px;"></div>
                              <div class="col-lg-2"></div>
                              <div class="col-lg-1" style="text-align: left; margin-top: 28px;">To:</div>
-                             <div class="col-lg-1"> <input type="date" style="height:70px;"></div>
+                             <div class="col-lg-1"> <input id="to" type="date" style="height:70px;"></div>
                      </div>
 
 
@@ -702,11 +702,11 @@
 
                  <div class="row" style="color: black;margin-bottom: 20px">
                      <div class="col-lg-5">
-                         <input name="choosing2" type="radio" value="no2" style="margin-left: 3%;"> <span>No</span>
+                         <input name="choosing2" id="ssno" onclick="checkbox(this.id)" type="radio" value="no2" style="margin-left: 3%;"> <span>No</span>
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing2" type="radio" value="yes2"> Yes, special storage condition is required
+                         <input name="choosing2" id="ssyes" onclick="checkbox(this.id)" type="radio" value="yes2"> Yes, special storage condition is required
                      </div>
 
                  </div>
@@ -718,7 +718,7 @@
                      <div class="col-lg-7 "></div>
                      <div  class="col-lg-5 yes2 selectt">
 
-                         <input type="text" class="form-control" placeholder="Enter Storage Requirements" style="height:70px;">
+                         <input type="text" id="storagereq" class="form-control" placeholder="Enter Storage Requirements" style="height:70px;">
                      </div>
 
 
@@ -736,11 +736,11 @@
 
                      <div class="col-lg-5">
 
-                         <input name="choosing3" type="radio" value="no3" style="margin-left: 3%;"> No
+                         <input name="choosing3" id="tempno" onclick="checkbox(this.id)" type="radio" value="no3" style="margin-left: 3%;"> No
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing3" type="radio" value="yes3"> Yes, temperature controlled equipment is required
+                         <input name="choosing3" id="tempyes" type="radio" onclick="checkbox(this.id)" value="yes3"> Yes, temperature controlled equipment is required
                      </div>
 
 
@@ -753,7 +753,7 @@
                      <div  class="col-lg-5 yes3 selectt">
 
 
-                         <input type="text" class="form-control" placeholder="Enter Details" style="height:70px;">
+                         <input type="text" id="tempdetails" class="form-control" placeholder="Enter Details" style="height:70px;">
 
                      </div>
 
