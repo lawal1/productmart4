@@ -9,19 +9,19 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="sty.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../sty.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../style.css"  media="screen,projection"/>
 
-    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="../splide/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -153,7 +153,7 @@
     <div style="" class="row">
         <div style="box-shadow: 3px 5px 3px 3px #afafaf; margin-top: 15px" class="row">
             <div style="margin-bottom: 20px" class="col s6">
-                <img class="responsive-img" src="cocoa.jpg">
+                <img class="responsive-img" src="../cocoa.jpg">
                 <div style="margin-left: 25%">
                     <p>Share this product:</p>
                     <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px" class="fa fa-facebook green-text"></i>
@@ -318,7 +318,7 @@
                        <p style="margin-left: 10%; font-size: 25px;">Let the supplier know <br> how best to serve you</p>
                    </div>
                    <div class="col s6" style="padding-left: 10%;">
-                       <img src="imgSQ.png">
+                       <img src="../imgSQ.png">
                    </div>
                </div>
             </div>
@@ -353,7 +353,7 @@
 
                                         </div>
                                         <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
-                                            <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
+                                            <input style=" margin-bottom: 2px"  id="amount" type="number" class="validate">
                                             <label for="email_inline">Input Quantity</label>
 
                                         </div>
@@ -404,7 +404,7 @@
 
                                         </div>
                                         <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
-                                            <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
+                                            <input style=" margin-bottom: 2px"  id="amount1" type="number" class="validate">
                                             <label for="email_inline">Input Quantity</label>
 
                                         </div>
@@ -461,17 +461,17 @@
 
                                             <form action="#">
 
-                                                <textarea></textarea>
+                                                <textarea tabindex="0" value="a" id= "pd" name="f" class="dd"></textarea>
                                                 <p>Choose inspection services: <span style="color:grey">( you can select more than one option )</span></p>
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <input name="Inspection" onclick="useInspection(this.id)" id="fullInspection" type="radio"  value="full" />
                                                         <span style="color:black;">Full Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input id="randomInspection" onclick="useInspection(this.id)" name="Inspection" type="radio" value="random" />
                                                         <span style="color: black">Random Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
                                                     </label>
                                                 </p>
@@ -483,7 +483,7 @@
 
                                                 <p style="margin-left: 20%;">
                                                     <label>
-                                                        <input name="Supervision" type="radio" value="supervisionYes" />
+                                                        <input id="extraInspection" name="Supervision" type="radio" value="supervisionYes" />
                                                         <span>Supervision of loading <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
                                                     </label>
                                                 </p>
@@ -552,20 +552,20 @@
                                                 <p>
 
                                                     <label>
-                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <input name="Inspection" type="radio" onclick="sender(this.id)" id="air"  value="full" />
                                                         <span style="color:black;">Send by air</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input name="Inspection" type="radio" onclick="sender(this.id)" id="sea"  value="random" />
                                                         <span style="color: black">Send by sea</span>
                                                     </label>
                                                 </p>
 
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input name="Inspection" type="radio" onclick="sender(this.id)" id="road"  value="random" />
                                                         <span style="color: black">Send by Road</span>
                                                     </label>
                                                 </p>
@@ -590,12 +590,12 @@
 
                                             <div class="col s4"></div>
 
-                                            <div class="col s4">
-                                                <a style="border-radius: 20px; " href="#">
+                                            <div onclick="storeDocs()" class="col s4">
+                                            
                                                     <div style="background-color: #007A39 !important; color: white; border-radius: 25px; margin-bottom: 25px; ">
-                                                        <p style="margin-left: 40%;  ">Ok </p>
+                                                        <p  style="margin-left: 40%;  "> save details </p>
                                                     </div>
-                                                </a>
+                                             
                                             </div>
 
                                         </div>
@@ -675,5 +675,33 @@
 <script src="/splide/dist/js/splide.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="drop2.js"></script>
+<script src="../drop2.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+    authDomain: "productxmartx.firebaseapp.com",
+    projectId: "productxmartx",
+    storageBucket: "productxmartx.appspot.com",
+    messagingSenderId: "526006862845",
+    appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+    measurementId: "G-2TPETBSSET"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage()
+</script>
+<script src="../buyerscripts/request.js"></script>
 </html>
