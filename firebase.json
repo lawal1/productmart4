@@ -5,12 +5,11 @@
   },
   "hosting": {
     "public": "public",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      ".git",
-      ".idea"
+      "**/node_modules/**"
     ]
   },
   "storage": {

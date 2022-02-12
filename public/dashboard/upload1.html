@@ -150,12 +150,12 @@
         }
 
 
-        #lastSection {
-        colorrgba(39, 116, 75, 0.5);
+        /* #lastSection {
+        colorgba(39, 116, 75, 0.5);
             font-size:24px;
             margin-top: 70px;
 
-        }
+        } */
 
         /*graph*/
         .barchart-Wrapper {
@@ -587,7 +587,7 @@
                <div class="row">
                    <div class="form-group col-lg-12">
                        <label for="TD">Product Description<i class="icon-star" aria-hidden="true" style="color:red"></i></label>
-                       <textarea class="form-control" id="TD" rows="3"></textarea>
+                       <textarea class="form-control" id="PD" rows="3"></textarea>
                    </div>
 
                </div>
@@ -664,11 +664,11 @@
 
                  <div class="row" style="color: black; margin-bottom: 20px; margin-top: 20px;">
                      <div class="col-lg-5">
-                         <input name="choosing1" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
+                         <input name="choosing1" onclick="checkbox(this.id)" id="yearroundyes" type="radio" value="yes1" style="margin-left: 3%;"> Yes, available year round
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing1" type="radio" value="no1"> No, only available from:
+                         <input name="choosing1" id="yearroundno" onclick="checkbox(this.id)" type="radio" value="no1"> No, only available from:
                      </div>
 
                 </div>
@@ -681,10 +681,10 @@
                          <div class="row">
                              <div class="col-lg-2"></div>
                              <div class="col-lg-1" style="margin-top: 28px;">From:</div>
-                             <div class="col-lg-2"><input type="date" style="height:70px;"></div>
+                             <div class="col-lg-2"><input id="from" type="date" style="height:70px;"></div>
                              <div class="col-lg-2"></div>
                              <div class="col-lg-1" style="text-align: left; margin-top: 28px;">To:</div>
-                             <div class="col-lg-1"> <input type="date" style="height:70px;"></div>
+                             <div class="col-lg-1"> <input id="to" type="date" style="height:70px;"></div>
                      </div>
 
 
@@ -702,11 +702,11 @@
 
                  <div class="row" style="color: black;margin-bottom: 20px">
                      <div class="col-lg-5">
-                         <input name="choosing2" type="radio" value="no2" style="margin-left: 3%;"> <span>No</span>
+                         <input name="choosing2" id="ssno" onclick="checkbox(this.id)" type="radio" value="no2" style="margin-left: 3%;"> <span>No</span>
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing2" type="radio" value="yes2"> Yes, special storage condition is required
+                         <input name="choosing2" id="ssyes" onclick="checkbox(this.id)" type="radio" value="yes2"> Yes, special storage condition is required
                      </div>
 
                  </div>
@@ -718,7 +718,7 @@
                      <div class="col-lg-7 "></div>
                      <div  class="col-lg-5 yes2 selectt">
 
-                         <input type="text" class="form-control" placeholder="Enter Storage Requirements" style="height:70px;">
+                         <input type="text" id="storagereq" class="form-control" placeholder="Enter Storage Requirements" style="height:70px;">
                      </div>
 
 
@@ -736,11 +736,11 @@
 
                      <div class="col-lg-5">
 
-                         <input name="choosing3" type="radio" value="no3" style="margin-left: 3%;"> No
+                         <input name="choosing3" id="tempno" onclick="checkbox(this.id)" type="radio" value="no3" style="margin-left: 3%;"> No
                      </div>
                      <div class="col-lg-2"></div>
                      <div class="col-lg-5" style="color: black;">
-                         <input name="choosing3" type="radio" value="yes3"> Yes, temperature controlled equipment is required
+                         <input name="choosing3" id="tempyes" type="radio" onclick="checkbox(this.id)" value="yes3"> Yes, temperature controlled equipment is required
                      </div>
 
 
@@ -753,7 +753,7 @@
                      <div  class="col-lg-5 yes3 selectt">
 
 
-                         <input type="text" class="form-control" placeholder="Enter Details" style="height:70px;">
+                         <input type="text" id="tempdetails" class="form-control" placeholder="Enter Details" style="height:70px;">
 
                      </div>
 
@@ -764,8 +764,8 @@
 
                      <div class="col-lg-12" style="text-align: center;">
 
-                         <p style="margin-top: 2%;"><button class="paybtn" type="submit">SAVE AND CONTINUE LATER</button></p>
-                         <p style="margin-top: 2%; margin-bottom: 10%;"><button class="blurpaybtn">NEXT</button></p>
+                         <p   style="margin-top: 2%;"><button onclick="storeDocs(this.id)" id="save" type="button" class="paybtn">SAVE AND CONTINUE LATER</button></p>
+                         <p  style="margin-top: 2%; margin-bottom: 10%;"><button onclick="storeDocs(this.id)" id="next"  class="blurpaybtn">NEXT</button></p>
 
 
 
@@ -797,8 +797,36 @@
     });
 
 </script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuIQcv2SJA5DqONkfkRDuM-9CxZAh0JNA",
+    authDomain: "productxmartx.firebaseapp.com",
+    projectId: "productxmartx",
+    storageBucket: "productxmartx.appspot.com",
+    messagingSenderId: "526006862845",
+    appId: "1:526006862845:web:98c44f4701fb580b9f0f94",
+    measurementId: "G-2TPETBSSET"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage()
+</script>
 <script src="assets/js/sidenav.js"></script>
 <script src="assets/js/Qurnex.js"></script>
 <script src="assets/js/bootstrap.js"></script>
+<script src="../admin/productgeneraldetails.js"></script>
 </body>
 </html>
