@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SupplierDash</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Qurnex.css" type="text/css">
+
+
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #EFF3F4;
+            color:#ffffff;
+            position: relative;
+
+        }
+
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s; /* If you want a transition effect */
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+
+
+        .sidebar a {
+            font-family: 'Poppins', sans-serif;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color:#ffffff;
+            display: block;
+            transition: 0.3s;
+            letter-spacing: 2px;
+            margin-bottom: 20px !important;
+        }
+
+        .sidebar img {
+            margin-bottom:70px !important;
+        }
+
+
+        /*contents*/
+
+        #main {
+            padding-left: 5%;
+        }
+
+        .contentHead {width: 40%}
+
+        .contentHead h4 {
+            Width: 300px;
+            Height: 60px;
+            padding-top:18px;
+            border-radius: 16px;
+            background-color: rgba(229, 229, 229,0.8);
+            font-size: 14px;
+            padding-left: 10px;
+            color: rgba(39, 116, 75, 0.5);
+            margin-top: 50px;
+        }
+
+
+        .contentHead h5 {
+            color:rgba(39, 116, 75, 0.5);
+            font-size:24px;
+            margin-top:100px;
+        }
+
+        .notification a {
+            color:rgba(39, 116, 75, 0.5)
+        }
+
+        .notification a:hover {
+            color:rgba(39, 116, 75, 0.5);
+            text-decoration: none;
+        }
+
+
+
+        .notification {
+            background-color: rgba(39, 116, 75, 0.5);
+            color: rgba(39, 116, 75, 0.5);
+            width: 20%;
+            height:80px;
+            margin-top:18px;
+            text-align: center;
+            border-radius: 20px;
+            padding-top: 2%;
+            position:absolute; right: 10px;
+        }
+
+
+        .notification i {
+            margin-right:10px;
+            font-size: 30px;
+        }
+
+
+        .notification i:nth-child(1n) {
+            margin-left: 10px;
+
+        }
+
+
+
+
+
+        .contentItems1 {
+            background-color: #000000;
+            padding:70px;
+            margin:10px;
+            border-radius:16px;
+            font-size:24px ;
+            color: #EFF3F4;
+            font-weight: 500;
+            width: 40%;
+            height: 200px;
+            box-sizing: border-box;
+
+        }
+
+        .contentItems2 {
+            background-color: rgba(39, 116, 75, 0.5);
+            padding: 70px;
+            margin:10px;
+            border-radius:16px;
+            font-size:24px ;
+            color: #EFF3F4;
+            font-weight: 500;
+            width: 40%;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        .secondRow img {
+            position:fixed; right: 40px;
+            width: 20%;
+        }
+
+
+        #lastSection {
+            colorrgba(39, 116, 75, 0.5);
+            font-size:24px;
+            margin-top: 70px;
+
+        }
+
+        /*graph*/
+        .barchart-Wrapper {
+            display: table;
+            position: relative;
+            margin:20px;
+            height: 252px;
+            width: 100%;
+        }
+        .barChart-Container {
+            display: table-cell;
+            width: 100%;
+            height: 100%;
+            padding-left: 15px;
+        }
+        .barchart {
+            display: table;
+            table-layout: fixed;
+            height: 100%;
+            width: 100%;
+            border-bottom: 3px solid grey;
+        }
+        .barchart-Col {
+            position: relative;
+            vertical-align: bottom;
+            display: table-cell;
+            height: 100%;
+        }
+        .barchart-Col + .barchart-Col {
+            border-left: 4px solid transparent;
+        }
+        .barchart-Bar {
+            position: relative;
+            height: 0;
+            transition: height 0.5s 2s;
+            width: 36px;
+            margin: auto;
+        }
+        .barchart-Bar:after {
+            content: attr(attr-height);
+            color: white;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+        .barchart-BarFooter {
+            position: absolute;
+            text-align: center;
+            height: 10%;
+            width: 100%;
+        }
+        .barchart-BarFooter h5 {
+            color:rgba(39, 116, 75, 0.5) ;
+            font-size: 15px;
+        }
+        .barchart-TimeCol {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .barchart-Time {
+            height: 25%;
+            vertical-align: middle;
+            position: relative;
+        }
+        .barchart-Time:after {
+            border-bottom: 1px solid black;
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0em;
+        }
+        .barchart-TimeText {
+            position: absolute;
+            top: -8px;
+            z-index: 1;
+            background:#EFF3F4;
+            padding-right: 5px;
+            color: #4d4d4d;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .month-bar {
+            background-color: peachpuff;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(39, 116, 75, 0.5) !important;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+        .openbtn {
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            background-color: rgba(51, 141, 88, 0.50) !important;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 16px;
+            border: 0;
+            position: fixed;
+            left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<!--sidebar-->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#"><img src="assets/img/imgLogo.png "></a>
+    <a class="active" style="color: rgba(0, 0, 0, 0.59) !important;" href="Dashboard.html"><i class="icon-home"></i>Supplier Dashboard</a>
+    <a class="notActive" href="salesChannels.html"><i class="icon-home"></i>Home</a>
+    <a class="notActive" href="salesChannels.html"><i class="icon-shopping-cart"></i>upload product</a>
+    <a class="notActive" href="salesChannels.html"><i class="icon-shopping-cart"></i>Orders</a>
+    <a class="notActive" href="salesChannels.html"><i class="icon-shopping-cart"></i>My products</a>
+    <a class="notActive" href="salesChannels.html"><i class="icon-shopping-cart"></i>Feedbacks</a>
+    <a class="notActive" href="signIn.html"><i class="icon-off"></i>Log out</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+  <p class="content">
+
+    <div class="row">
+        <div class="col-lg-4 col-xs-4 contentHead">
+            <h4>welcome back Mark.</h4>
+        </div>
+        <div class=" col-lg-4"></div>
+
+        <div class="col-lg-4 col-xs-4 notification">
+
+            <a style="color: #BA5313 !important;" href="profile.html"><i class="icon-user"></i></a>
+            <a style="color: #BA5313 !important;" href="notification.html"><i class="icon-bell"></i></a>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="row">
+
+        <div class="row">
+            <div class="col-lg-6" >
+                <h5 style="color: rgba(0, 0, 0, 0.59); margin-left: 5%">Open Orders</h5>
+            </div>
+            <div style="float: left;" class="col-lg-6" >
+                <h5 style="color: rgba(0, 0, 0, 0.2); float: right; margin-right: 38%">Closed Orders</h5>
+            </div>
+        </div>
+
+        <div style="border: 1px solid #000000; color: #000000" class="col-lg-12 col-xs-12">
+            <div class="row">
+               <div class="col-lg-3 col-xs-3">
+                  <h5 style="text-align: center">Date</h5>
+               </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Product Name</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Ordered quantity</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <a href="#"><h5 style="text-align: center;  color: #BA5313">Status </h5></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10px; color: #000000;  border-radius: 25px; border: 1px solid green; background-color: rgba(0, 122, 57, 0.14)" class="col-lg-12 col-xs-12">
+            <div style="" class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">12-10-2021</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Cocoa- QBL-18L40</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">10 bags</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <a href="#"><h5 style="text-align: center;  color: #BA5313">Quote  </h5></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10px; color: #000000;  border-radius: 25px; border: 1px solid green; background-color: rgba(0, 122, 57, 0.14)" class="col-lg-12 col-xs-12">
+            <div style="" class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">12-10-2021</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Cocoa- QBL-18L40</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">10 bags</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <a href="#"><h5 style="text-align: center;  color: #BA5313">Inspection</h5></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10px; color: #000000;  border-radius: 25px; border: 1px solid green; background-color: rgba(0, 122, 57, 0.14)" class="col-lg-12 col-xs-12">
+            <div style="" class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">12-10-2021</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Cocoa- QBL-18L40</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">10 bags</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <a href="#"><h5 style="text-align: center;  color: #BA5313">Quote  </h5></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10px; color: #000000;  border-radius: 25px; border: 1px solid green; background-color: rgba(0, 122, 57, 0.14)" class="col-lg-12 col-xs-12">
+            <div style="" class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">12-10-2021</h5>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">Cocoa- QBL-18L40</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <h5 style="text-align: center">10 bags</h5>
+                </div>
+
+                <div class="col-lg-3 col-xs-3">
+                    <a href="#"><h5 style="text-align: center;  color: #BA5313">Quote  </h5></a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+   </div>
+
+</p>
+<!--graph-->
+</div>
+
+
+<script src="assets/js/sidenav.js"></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/Qurnex.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+</body>
+</html>
