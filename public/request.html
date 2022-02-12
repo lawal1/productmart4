@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>ProductMart</title>
+    <title>Request</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -22,6 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
         .bg {
@@ -50,6 +52,8 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+
 
 
 
@@ -163,7 +167,7 @@
 
                 </div>
             </div>
-            <div  class="col s6">
+            <div  class="col s6" style="padding-left: 10%;">
                 <h5 style="font-size: 20px !important; margin-top: 150px; font-weight: 600" class="black-text flow-text">
                     <a>   <i  style="font-size: 30px; margin-top: 7px; margin-bottom: 0px; margin-right: 7px; color: gold" class="fa fa-star "></i>
                     </a>
@@ -306,15 +310,15 @@
 </div>
 
 <div class="container">
-    <div class="card">
+    <div class="card" style="padding: 2%;">
         <div class="row">
             <div class="col s12">
                <div class="row">
                    <div class="col s6">
-                       <p>Let the supplier know how best <br> to serve you</p>
+                       <p style="margin-left: 10%; font-size: 25px;">Let the supplier know <br> how best to serve you</p>
                    </div>
-                   <div style="background-color: green; height: 150px" class="col s6">
-
+                   <div class="col s6" style="padding-left: 10%;">
+                       <img src="imgSQ1.png">
                    </div>
                </div>
             </div>
@@ -329,6 +333,7 @@
                 <div class="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
+
                             <li class="splide__slide">
 
                                 <div class="row">
@@ -337,9 +342,9 @@
                                     </div>
                                     <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
                                         <div class="row">
-                                           <div class="col s2">
+                                            <div class="col s2">
 
-                                           </div>
+                                            </div>
                                             <div class="col s8">
                                                 <p style="text-align: center !important; font-weight: 600 ">Indicate the quantity of the produce <br>you want:</p>
                                             </div>
@@ -370,17 +375,242 @@
 
                                     </div>
                                 </div>
+
+
+
+
+
+
                             </li>
+
+
+
+                            <li class="splide__slide">
+                                <div class="row">
+                                    <div class="col s3">
+
+                                    </div>
+                                    <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
+                                        <div class="row">
+                                            <div class="col s2">
+
+                                            </div>
+                                            <div class="col s8">
+                                                <p style="text-align: center !important; font-weight: 600 ">Indicate the quantity of the produce <br>you want:</p>
+                                                <p style="color:#007A39; text-align: center;">$100,000 (200kg)</p>
+                                            </div>
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+                                        <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
+                                            <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
+                                            <label for="email_inline">Input Quantity</label>
+
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+                                        <div class="col s4">
+
+                                        </div>
+                                        <a style="border-radius: 20px; " href="#">
+                                            <div style="background-color: #007A39 !important; color: white; border-radius: 25px; margin-bottom: 25px; " class="col s4">
+                                                <p style="margin-left: 40%;  ">Next </p>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div style="margin-bottom: 0 !important;"  class="row">
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </li>
+
+
+
+
+
+
                             <li class="splide__slide">
 
+                                <div class="row">
+                                    <div class="col s3">
+
+                                    </div>
+                                    <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
+                                        <div class="row">
+                                           <div class="col s2">
+
+                                           </div>
+                                            <div class="col s8">
+                                                <p style="text-align: center !important; font-weight: 600 ">Product description:</p>
+                                            </div>
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+                                        <div style="" class="input-field col s8">
+
+                                            <form action="#">
+
+                                                <textarea></textarea>
+                                                <p>Choose inspection services: <span style="color:grey">( you can select more than one option )</span></p>
+                                                <p>
+                                                    <label>
+                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <span style="color:black;">Full Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <span style="color: black">Random Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </p>
+
+                                                <p>
+                                                   Extra Inspection Service
+
+                                                </p>
+
+                                                <p style="margin-left: 20%;">
+                                                    <label>
+                                                        <input name="Supervision" type="radio" value="supervisionYes" />
+                                                        <span>Supervision of loading <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </p>
+                                            </form>
 
 
+
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+
+                                        <div class="row">
+                                        <div class="col s4">
+                                            <a style="color: black " href="#">
+
+                                                    <p style="margin-left: 40%;  ">Back </p>
+                                            </a>
+
+                                        </div>
+
+                                            <div class="col s4"></div>
+
+                                            <div class="col s4">
+                                            <a style="border-radius: 20px; " href="#">
+                                                <div style="background-color: #007A39 !important; color: white; border-radius: 25px; margin-bottom: 25px; ">
+                                                    <p style="margin-left: 40%;  ">Next </p>
+                                                </div>
+                                            </a>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div style="margin-bottom: 0 !important;"  class="row">
+
+
+                                    </div>
+                                </div>
                             </li>
-                            <li class="splide__slide">Slide 03</li>
 
 
 
-                            <li class="splide__slide">Slide 04</li>
+                            <li class="splide__slide">
+
+                                <div class="row">
+                                    <div class="col s3">
+
+                                    </div>
+                                    <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
+                                        <div class="row">
+                                            <div class="col s2">
+
+                                            </div>
+                                            <div class="col s8">
+                                                <p style="text-align: center !important; font-weight: 600 ">Choose Shipping services:</p>
+                                            </div>
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+                                        <div style="" class="input-field col s8">
+
+                                            <form action="#">
+                                                <p>
+
+                                                    <label>
+                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <span style="color:black;">Send by air</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <span style="color: black">Send by sea</span>
+                                                    </label>
+                                                </p>
+
+                                                <p>
+                                                    <label>
+                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <span style="color: black">Send by Road</span>
+                                                    </label>
+                                                </p>
+
+                                            </form>
+
+
+
+                                        </div>
+                                        <div class="col s2">
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col s4">
+                                                <a style="color: black " href="#">
+
+                                                    <p style="margin-left: 40%;  ">Back </p>
+                                                </a>
+
+                                            </div>
+
+                                            <div class="col s4"></div>
+
+                                            <div class="col s4">
+                                                <a style="border-radius: 20px; " href="#">
+                                                    <div style="background-color: #007A39 !important; color: white; border-radius: 25px; margin-bottom: 25px; ">
+                                                        <p style="margin-left: 40%;  ">Ok </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div style="margin-bottom: 0 !important;"  class="row">
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
                         </ul>
                     </div>
                 </div>
