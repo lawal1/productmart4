@@ -53,6 +53,17 @@
         background-size: cover;
     }
 
+    i a {
+        color:black;
+        text-decoration: none;
+    }
+
+
+    i a:hover {
+       color: grey;
+        text-decoration: none;
+    }
+
 
 
 </style>
@@ -154,12 +165,12 @@
     <div class="col s3">
        <div style="font-size: 20px; margin-top: 7px; margin-bottom: 7px;" class="row">
          <div class="col s6">
-             <a style="float: right" class="white-text modal-trigger" href="#modal1">Sign Up </a>
 
              <div id="modal1" class="modal">
                  <div class="modal-content">
                      <div class="row">
                          <div class="col s6">
+                             <i style="" class="material-icons prefix"><a href="index.html">cancel</a></i>
                              <p style="text-align: center; font-weight: 700;margin-bottom: 0 !important;">Welcome!</p>
 
 
@@ -334,8 +345,100 @@
 <div style="margin-top: 20px" class="row">
     <div class="splide">
         <div class="splide__track">
-            <ul id="list" class="splide__list">
-              
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div style=" padding: 7px">
+                        <div class="container">
+                            <div  class="card" style="box-sizing: content-box; height:400px;">
+                                <p style="text-align: center"><strong>Maize-NBL-18B10</strong></p>
+
+                                <div style="box-sizing: content-box; height: 200px;">
+
+                                <img style=" width: 80%; margin-left: 10%;" src="maize.png">
+
+                                 </div>
+
+                                <p style="text-align: center">$10,000 per bag (20kg)</p>
+
+                                <div style="margin-top: 0!important;" class="row" >
+                                    <div class="col s4">
+
+                                    </div>
+                                    <div class="col s4">
+                                        <a style="padding-right: 30px; margin-bottom: 15px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #007A39; border-radius:
+10px; color: white; text-align: center" href="#">View</a>
+
+                                    </div>
+
+                                </div>
+                                <span style="text-align: center; font-size: 7px">
+                                   <p style="color: white; ">gfh</p>
+</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div style=" padding: 7px">
+                        <div class="container">
+                            <div  class="card" style="box-sizing: content-box; height:400px;">
+                                <p style="text-align: center"><strong>Cocoa-QBL-18B10</strong></p>
+
+
+                                <div style="box-sizing: content-box; height: 200px;">
+
+                                <img style=" width: 80%; margin-left: 10%;" src="imgbg2.png">
+                                </div>
+
+                                <p style="text-align: center">$10,000 per bag (20kg)</p>
+
+                                <div style="margin-top: 0!important;" class="row" >
+                                    <div class="col s4">
+
+                                    </div>
+                                    <div class="col s4">
+                                        <a style="padding-right: 30px; margin-bottom: 15px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #007A39; border-radius:
+10px; color: white; text-align: center" href="#">View</a>
+
+                                    </div>
+
+                                </div>
+                                <span style="text-align: center; font-size: 7px">
+                                   <p style="color: white; ">gfh</p>
+</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div style=" padding:7px;">
+                        <div class="container">
+                            <div  class="card" style="box-sizing: content-box; height:400px;">
+                                <p style="text-align: center;"><strong>Palm-SMK-18B10</strong></p>
+
+                                <div style="box-sizing: content-box; height: 200px;">
+                                <img style="width: 80% ;margin-left: 10%; box-sizing: content-box" src="imgbg3.png">
+                                </div>
+                                <p style="text-align: center">$10,000 per bag (20kg)</p>
+
+                                <div style="margin-top: 0!important;" class="row" >
+                                    <div class="col s4">
+
+                                    </div>
+                                    <div class="col s4">
+                                        <a style="padding-right: 30px; margin-bottom: 15px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #007A39; border-radius:
+10px; color: white; text-align: center" href="#">View</a>
+
+                                    </div>
+
+                                </div>
+                                <span style="text-align: center; font-size: 7px">
+                                   <p style="color: white; ">gfh</p>
+</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -446,9 +549,7 @@
   const storage = firebase.storage()
 </script>
 <script src="splide/dist/js/splide.min.js"></script>
-<script src="buyerscripts/login.js"></script>
-<script src="buyerscripts/listproducts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="drop.js"></script>
-
+<script src="buyerscripts/login.js"></script>
 </html>

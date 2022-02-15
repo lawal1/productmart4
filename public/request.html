@@ -54,7 +54,42 @@
         }
 
 
+        i a {
+            color:black;
+            text-decoration: none;
+        }
 
+
+        i a:hover {
+            color: grey;
+            text-decoration: none;
+        }
+
+
+        .selectt {
+            color: #000000;
+            display: none;
+            margin-top: 30px;
+            margin-bottom: 5%;
+
+
+
+        }
+
+        .input-field p {
+             margin-bottom: 2px;
+        }
+
+        .input-field {
+            margin-bottom: 5px;
+        }
+        select {
+            border: 1px solid black;
+        }
+
+        input {
+            border: 1px solid black;
+        }
 
 
     </style>
@@ -87,9 +122,9 @@
                     <div class="row">
                         <div class="col s12">
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <label style=" text-align: center" for="autocomplete-input"> Search products and categories </label>
-                                    <input type="text" id="autocomplete-input" class="autocomplete">
+                                <div class="input-field col s12" style="margin-top: 0 !important;">
+
+                                    <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Search all Categories">
                                 </div>
                             </div>
                         </div>
@@ -186,6 +221,7 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
+                        <i style="" class="material-icons prefix"><a href="request.html">cancel</a></i>
                         <div class="row">
                             <div class="col s6">
                                 <p style="text-align: center; font-weight: 700;margin-bottom: 0 !important;">Welcome!</p>
@@ -199,8 +235,7 @@
                                             </div>
                                             <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
                                                 <i style="" class="material-icons prefix">account_circle</i>
-                                                <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
-                                                <label for="email_inline">Email</label>
+                                                <input style=" margin-bottom: 2px"  id="email" type="email" class="validate" placeholder="Email">
 
                                             </div>
                                             <div class="col s2">
@@ -213,8 +248,8 @@
                                             </div>
                                             <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
                                                 <i style="" class="material-icons prefix">lock</i>
-                                                <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
-                                                <label for="email_inline">Password</label>
+                                                <input style=" margin-bottom: 2px"  id="pass" type="password" class="validate" placeholder="Password">
+
 
                                             </div>
                                             <div class="col s2">
@@ -330,67 +365,19 @@
     <div class="card">
         <div class="row">
             <div class="col s12">
-                <div class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
 
-                            <li class="splide__slide">
+
+
+
+
+
+
 
                                 <div class="row">
                                     <div class="col s3">
 
                                     </div>
-                                    <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
-                                        <div class="row">
-                                            <div class="col s2">
-
-                                            </div>
-                                            <div class="col s8">
-                                                <p style="text-align: center !important; font-weight: 600 ">Indicate the quantity of the produce <br>you want:</p>
-                                            </div>
-                                        </div>
-                                        <div class="col s2">
-
-                                        </div>
-                                        <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
-                                            <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
-                                            <label for="email_inline">Input Quantity</label>
-
-                                        </div>
-                                        <div class="col s2">
-
-                                        </div>
-                                        <div class="col s4">
-
-                                        </div>
-                                        <a style="border-radius: 20px; " href="#">
-                                            <div style="background-color: #007A39 !important; color: white; border-radius: 25px; margin-bottom: 25px; " class="col s4">
-                                                <p style="margin-left: 40%;  ">Next </p>
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                    <div style="margin-bottom: 0 !important;"  class="row">
-
-
-                                    </div>
-                                </div>
-
-
-
-
-
-
-                            </li>
-
-
-
-                            <li class="splide__slide">
-                                <div class="row">
-                                    <div class="col s3">
-
-                                    </div>
-                                    <div style=" background-color: rgba(0, 239, 0, 0.09)" class="col s6">
+                                    <div style=" background-color: rgba(0, 239, 0, 0.09); margin-top: 20px;" class="col s6">
                                         <div class="row">
                                             <div class="col s2">
 
@@ -404,8 +391,7 @@
 
                                         </div>
                                         <div style="border: 1px solid green; border-radius: 20px; padding-right: 10px; padding-left: 10px" class="input-field col s8">
-                                            <input style=" margin-bottom: 2px"  id="email" type="email" class="validate">
-                                            <label for="email_inline">Input Quantity</label>
+                                            <input style=" margin-bottom: 2px"  id="quan2" type="text" class="validate" placeholder="Input Quantity">
 
                                         </div>
                                         <div class="col s2">
@@ -430,16 +416,6 @@
 
 
 
-
-
-                            </li>
-
-
-
-
-
-
-                            <li class="splide__slide">
 
                                 <div class="row">
                                     <div class="col s3">
@@ -465,13 +441,13 @@
                                                 <p>Choose inspection services: <span style="color:grey">( you can select more than one option )</span></p>
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <input name="Inspection1" type="radio"  value="full" />
                                                         <span style="color:black;">Full Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input name="Inspection2" type="radio" value="random" />
                                                         <span style="color: black">Random Inspection <i style="color: green;" class="fa fa-question-circle" aria-hidden="true"></i></span>
                                                     </label>
                                                 </p>
@@ -524,11 +500,6 @@
 
                                     </div>
                                 </div>
-                            </li>
-
-
-
-                            <li class="splide__slide">
 
                                 <div class="row">
                                     <div class="col s3">
@@ -552,22 +523,134 @@
                                                 <p>
 
                                                     <label>
-                                                        <input name="Inspection" type="radio"  value="full" />
+                                                        <input name="Inspection" type="radio" value="air" />
                                                         <span style="color:black;">Send by air</span>
                                                     </label>
+
+                                                    <div class="selectt air" style="background-color: white; text-align: center; padding: 5% 3% 5% 3%;">
+
+
+                                                       <h3 style="font-size: 17px;"> Destination</h3>
+                                                       <h4 style="color: grey; font-size: 15px;"> By air</h4>
+
+
+                                                         <p style="text-align: left; margin-left: 3%;"><strong>Country:</strong></p>
+                                                         <select class="browser-default">
+                                                             <option value="" disabled selected>Choose a country</option>
+                                                             <option value="1">Nigeria</option>
+                                                             <option value="2">Senegal</option>
+                                                             <option value="3">Ghana</option>
+                                                         </select>
+                                                        <p style="text-align: left; margin-left: 3%;"><strong>Port:</strong></p>
+                                                         <select class="browser-default">
+                                                             <option value="" disabled selected>Choose a port</option>
+                                                             <option value="1">Apapa</option>
+                                                             <option value="2">Ibadan</option>
+                                                             <option value="3">Rivers</option>
+                                                        </select>
+
+
+
+
+
+
+                                                </div>
                                                 </p>
+
+
+                                                
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input name="Inspection" type="radio" value="sea" />
                                                         <span style="color: black">Send by sea</span>
                                                     </label>
+                                                <div class="selectt sea" style="background-color: white; text-align: center; padding: 5% 3% 5% 3%;">
+
+                                                <h3 style="font-size: 17px;"> Destination</h3>
+                                                <h4 style="color: grey; font-size: 15px;"> By sea</h4>
+
+
+                                                <p style="text-align: left; margin-left: 3%;"><strong>Country:</strong></p>
+                                                <select class="browser-default">
+                                                    <option value="" disabled selected>Choose a country</option>
+                                                    <option value="1">Nigeria</option>
+                                                    <option value="2">Senegal</option>
+                                                    <option value="3">Ghana</option>
+                                                </select>
+                                                <p style="text-align: left; margin-left: 3%;"><strong>Port:</strong></p>
+                                                <select class="browser-default">
+                                                    <option value="" disabled selected>Choose a port</option>
+                                                    <option value="1">Apapa</option>
+                                                    <option value="2">Ibadan</option>
+                                                    <option value="3">Rivers</option>
+                                                </select>
+
+
+
+                                            </div>
                                                 </p>
 
                                                 <p>
                                                     <label>
-                                                        <input name="Inspection" type="radio" value="random" />
+                                                        <input name="Inspection" type="radio" value="road" />
                                                         <span style="color: black">Send by Road</span>
                                                     </label>
+
+                                                <div class="selectt road" style="background-color: white; text-align: center; padding: 5% 3% 5% 3%;">
+
+                                                <h3 style="font-size: 17px;"> Destination</h3>
+                                                <h4 style="color: grey; font-size: 15px;"> By road</h4>
+                                                <div class="row">
+
+                                                    <div class="input-field col s12">
+                                                        <p style="text-align: left; margin-left: 3%;">Address1:</p>
+                                                        <input placeholder="address1" id="ad1" type="text" class="validate">
+
+                                                    </div>
+                                                 </div>
+                                                <div class="row">
+
+                                                    <div class="input-field col s12">
+                                                        <p style="text-align: left; margin-left: 3%;">Address2:</p>
+                                                        <input placeholder="address2" id="ad2" type="text" class="validate">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="input-field col s6">
+                                                        <p style="text-align: left; margin-left: 3%;">City:</p>
+                                                        <input placeholder="city" id="cty" type="text" class="validate">
+
+                                                    </div>
+
+                                                    <div class="input-field col s6">
+                                                        <p style="text-align: left; margin-left: 3%;">State/Province:</p>
+                                                        <input placeholder="state/province" id="st" type="text" class="validate">
+
+                                                    </div>
+                                                </div>
+
+                                                <p style="text-align: left; margin-left: 3%;"><strong>Country:</strong></p>
+                                                <select class="browser-default">
+                                                    <option value="" disabled selected>Choose a country</option>
+                                                    <option value="1">Nigeria</option>
+                                                    <option value="2">Senegal</option>
+                                                    <option value="3">Ghana</option>
+                                                </select>
+
+                                                <div class="row">
+
+                                                    <div class="input-field col s12">
+                                                        <p style="text-align: left; margin-left: 3%;">Postal/Zip code:</p>
+                                                        <input placeholder="Postal/Zip code"  id="zp" type="text" class="validate">
+
+                                                    </div>
+                                                </div>
+
+
+                                                </div>
                                                 </p>
 
                                             </form>
@@ -607,13 +690,8 @@
 
                                     </div>
                                 </div>
-                            </li>
 
 
-
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -669,6 +747,18 @@
         </div>
     </div>
 </footer>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('input[type="radio"]').click(function() {
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".selectt").not(targetBox).hide();
+            $(targetBox).show();
+        });
+    });
+
+</script>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
